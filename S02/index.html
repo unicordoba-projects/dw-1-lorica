@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mi Página Web</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+      header {
+        background: #f8f8f8;
+        padding: 10px;
+      }
+      /* Tabla del header */
+      table.header-table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      /* Estilo para el menú top */
+      .top-menu {
+        text-align: right;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #ddd;
+      }
+      .top-menu ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .top-menu li {
+        display: inline;
+        margin-left: 15px;
+      }
+      /* Fila para logo y menú principal */
+      .logo {
+        vertical-align: middle;
+      }
+      .logo img {
+        max-width: 100px;
+      }
+      .main-menu {
+        text-align: right;
+        vertical-align: middle;
+      }
+      .main-menu ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .main-menu li {
+        display: inline;
+        margin-left: 15px;
+      }
+      /* Slider */
+      .slider {
+        margin: 20px 0;
+      }
+      .slider img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      /* Contentboxes */
+      .contentboxes {
+        margin: 20px 0;
+      }
+      .contentboxes table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .contentboxes td {
+        width: 25%;
+        padding: 10px;
+      }
+      .contentbox {
+        border: 1px solid #ddd;
+        padding: 15px;
+        text-align: center;
+        background-color: #f9f9f9;
+      }
+      /* Noticias */
+      .news-section {
+        margin: 20px 0;
+      }
+      .news-section table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .news-section td {
+        vertical-align: top;
+        padding: 10px;
+      }
+      .news-main img {
+        width: 100%;
+        height: auto;
+        max-width: 600px; /* Imagen más grande para la noticia principal */
+        display: block;
+        margin-bottom: 10px;
+      }
+      .news-secondary img {
+        width: 100%;
+        height: auto;
+        max-width: 200px;
+        display: block;
+        margin-bottom: 10px;
+      }
+      .news-title {
+        font-size: 1.2em;
+        margin: 10px 0 5px 0;
+      }
+      .news-description {
+        font-size: 0.9em;
+      }
+      /* Contenido principal */
+      .content {
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <table class="header-table" cellspacing="0" cellpadding="0">
+        <!-- Menú top -->
+        <tr>
+          <td colspan="2" class="top-menu">
+            <ul>
+              <li><a href="#">Inicio</a></li>
+              <li><a href="#">Acerca de</a></li>
+              <li><a href="#">Contacto</a></li>
+            </ul>
+          </td>
+        </tr>
+        <!-- Logo y menú principal -->
+        <tr>
+          <td class="logo">
+            <img src="../images/unicordoba_logo.png" alt="Logo" />
+          </td>
+          <td class="main-menu">
+            <ul>
+              <li><a href="#">Servicios</a></li>
+              <li><a href="#">Portafolio</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </header>
+
+    <div class="content">
+      <!-- Sección Slider -->
+      <section class="slider">
+        <table width="100%" cellspacing="0" cellpadding="0">
+          <tr>
+            <td>
+              <img src="../images/banner.png" alt="Imagen Slider" />
+            </td>
+          </tr>
+        </table>
+      </section>
+
+      <!-- Sección Contentboxes -->
+      <section class="contentboxes">
+        <table cellspacing="0" cellpadding="0">
+          <tr>
+            <td>
+              <div class="contentbox">
+                <h3>Box 1</h3>
+                <p>Contenido del box 1.</p>
+              </div>
+            </td>
+            <td>
+              <div class="contentbox">
+                <h3>Box 2</h3>
+                <p>Contenido del box 2.</p>
+              </div>
+            </td>
+            <td>
+              <div class="contentbox">
+                <h3>Box 3</h3>
+                <p>Contenido del box 3.</p>
+              </div>
+            </td>
+            <td>
+              <div class="contentbox">
+                <h3>Box 4</h3>
+                <p>Contenido del box 4.</p>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </section>
+
+      <!-- Bienvenidos -->
+      <h1>Bienvenidos a mi página web</h1>
+      <p>
+        Esta es una página de ejemplo que utiliza tablas para la maquetación y
+        div para el contenido, sin emplear flexbox.
+      </p>
+
+      <!-- Sección de Noticias -->
+      <section class="news-section">
+        <table cellspacing="0" cellpadding="0">
+          <!-- Noticia principal -->
+          <tr class="news-main">
+            <td colspan="3">
+              <img src="../images/noticia-1.jpg" alt="Noticia Principal" />
+              <h2 class="news-title">Noticia Principal</h2>
+              <p class="news-description">
+                Esta es la noticia principal con una imagen más grande que
+                destaca sobre el resto.
+              </p>
+            </td>
+          </tr>
+          <!-- Noticias secundarias -->
+          <tr>
+            <td class="news-secondary">
+              <img src="../images/noticia-1.jpg" alt="Noticia 2" />
+              <h3 class="news-title">Noticia 2</h3>
+              <p class="news-description">Descripción de la noticia 2.</p>
+            </td>
+            <td class="news-secondary">
+              <img src="../images/noticia-1.jpg" alt="Noticia 3" />
+              <h3 class="news-title">Noticia 3</h3>
+              <p class="news-description">Descripción de la noticia 3.</p>
+            </td>
+            <td class="news-secondary">
+              <img src="../images/noticia-1.jpg" alt="Noticia 4" />
+              <h3 class="news-title">Noticia 4</h3>
+              <p class="news-description">Descripción de la noticia 4.</p>
+            </td>
+          </tr>
+        </table>
+      </section>
+    </div>
+  </body>
+</html>

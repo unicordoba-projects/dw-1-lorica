@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplo CSS</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+      .titillium-web-extralight {
+        font-family: "Titillium Web", sans-serif;
+        font-weight: 200;
+        font-style: normal;
+      }
+
+      .titillium-web-light {
+        font-family: "Titillium Web", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+      }
+
+      .titillium-web-regular {
+        font-family: "Titillium Web", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .titillium-web-semibold {
+        font-family: "Titillium Web", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+      }
+
+      .titillium-web-bold {
+        font-family: "Titillium Web", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+      }
+
+      .titillium-web-black {
+        font-family: "Titillium Web", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+      }
+
+      .titillium-web-extralight-italic {
+        font-family: "Titillium Web", sans-serif;
+        font-weight: 200;
+        font-style: italic;
+      }
+
+      .titillium-web-light-italic {
+        font-family: "Titillium Web", sans-serif;
+        font-weight: 300;
+        font-style: italic;
+      }
+
+      .titillium-web-regular-italic {
+        font-family: "Titillium Web", sans-serif;
+        font-weight: 400;
+        font-style: italic;
+      }
+
+      .titillium-web-semibold-italic {
+        font-family: "Titillium Web", sans-serif;
+        font-weight: 600;
+        font-style: italic;
+      }
+
+      .titillium-web-bold-italic {
+        font-family: "Titillium Web", sans-serif;
+        font-weight: 700;
+        font-style: italic;
+      }
+      .news-main img {
+        width: 100%;
+        height: auto;
+        max-width: 600px; /* Imagen más grande para la noticia principal */
+        display: block;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="padding-left: 30px; padding-right: 30px">
+      <table style="width: 100%">
+        <tr>
+          <td><img src="../images/unicordoba_logo.png" alt="" /></td>
+          <td>
+            <style>
+              .main-menu-item {
+                padding-left: 10px;
+                padding-right: 10px;
+                display: inline-block;
+              }
+            </style>
+            <div style="font-weight: 600; width: 100%">
+              <div class="main-menu-item">INICIO</div>
+              <div class="main-menu-item">QUIENES SOMOS</div>
+              <div class="main-menu-item">SERVICIOS</div>
+              <div class="main-menu-item">PORTAFOLIO</div>
+              <div class="main-menu-item">BLOG</div>
+            </div>
+          </td>
+          <td style="text-align: right">
+            <div
+              class="titillium-web-bold"
+              style="
+                border: 1px solid rgb(99, 233, 99);
+                padding: 10px;
+                border-radius: 10px;
+                text-align: center;
+                width: 150px;
+                background-color: hsl(122, 74%, 67%);
+                color: rgb(47, 91, 41);
+              "
+            >
+              CONTACTENOS
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div>
+      <img src="../images/banner.png" style="width: 100%; height: auto" />
+    </div>
+    <div
+      class="titillium-web-semibold"
+      style="font-size: 50px; text-align: center"
+    >
+      Noticias
+    </div>
+    <div style="padding-left: 30px; padding-right: 30px">
+      <table>
+        <tr>
+          <td style="width: 400px">
+            <img
+              src="../images/noticia-1.jpg"
+              alt="Noticia Principal"
+              style="width: 400px; height: auto"
+            />
+          </td>
+          <td>
+            <div style="padding: 20px">
+              <div class="titillium-web-bold" style="font-size: 20px">
+                Egresado de Unicórdoba, agente ‘Porras’ en la serie Medusa, de
+                Netflix, nominado a los premios India Catalina
+              </div>
+              <div>Fecha: 15-03-2025</div>
+              <div>
+                El talento que refuerza la Universidad de Córdoba en cada uno de
+                sus estudiantes y egresados se destaca esta vez en la plataforma
+                de entretenimiento y producción audiovisual estadounidense
+                Netflix, donde, un egresado del programa de la Licenciatura en
+                Educación Artística, Johan Rivera Zumaqué, actúa en la serie
+                Medusa, interpretando al agente Porras, y quien, luego de muchas
+                representaciones en la televisión está nominado a los Premios
+                India Catalina, en la categoría Actor Favorito del Público.
+              </div>
+            </div>
+          </td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+    <section class="news-section">
+      <table cellspacing="0" cellpadding="0">
+        <!-- Noticia principal -->
+        <tr class="news-main">
+          <td colspan="3">
+            <h2 class="news-title">Noticia Principal</h2>
+            <p class="news-description">
+              Esta es la noticia principal con una imagen más grande que destaca
+              sobre el resto.
+            </p>
+          </td>
+        </tr>
+        <!-- Noticias secundarias -->
+      </table>
+    </section>
+  </body>
+</html>
