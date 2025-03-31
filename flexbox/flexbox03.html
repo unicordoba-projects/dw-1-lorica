@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+    <style>
+        .color-container{
+            background-color: chocolate;
+        }
+        .color-item{
+            background-color: aquamarine;
+        }
+        .item01{
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+
+<div style="justify-content: flex-end; 
+            padding: 10px; align-items: center;
+            display: flex; height: 100px; 
+            gap: 50px;" class="color-container">
+    <div class="color-item item01">1</div>
+    <div class="color-item item01">2</div>
+    <div class="color-item item01">3</div>
+</div>
+
+
+<style>
+    .container01{
+        display: flex;
+        gap:10px;
+    }
+    .item-flex-col1{
+        flex-grow: 1;
+    }
+    .item-flex-col3{
+        flex-grow: 3;
+    }
+    .color-item-orange{
+        background-color: orange;
+    }
+</style>
+
+<h2>Flex-grow</h2>
+    <div class="container01 color-container">
+        <div class="item-flex-col1 color-item">Aside</div>
+        <div class="item-flex-col3 color-item-orange">Content</div>
+    </div>
+    
+</body>
+</html>

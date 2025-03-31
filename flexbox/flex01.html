@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+    <style>
+        .color-container{
+            background-color: rgb(39, 146, 146);
+        }
+        .color-item{
+            background-color: burlywood;
+        }
+        .color-item-orange{
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+
+    <div style="padding: 0 50px 0 50px;">
+        <div style="display: flex;">
+            <div>
+                <img src="../images/unicordoba_logo.png" alt="">
+            </div>
+            <div style="width: 100%; display: flex; gap: 20px; align-items: center; justify-content: flex-end;">
+                <div>INSTITUCIONAL</div>
+                <div>ACADEMIA</div>
+                <div>INVESTIGACIÓN</div>
+                <div>EXTENSIÓN</div>
+                <div>ADMISIONES</div>
+                <div>INTERNACIONALIZACIÓN</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div style="display: flex; background-color: #1565C0; height: 300px;">
+        <div style="width: 50%; background-color: darkorange;">
+            <div style="height: 50%; background-color: azure;">Foto 1</div>
+            <div style="height: 50%; background-color: cornflowerblue">Foto 2</div>
+        </div>
+        <div style="width: 50%; background-color: chartreuse;">
+            Foto 3
+        </div>
+    </div>
+
+    <h1>
+        Properties for Parent
+    </h1>
+    <hr>
+
+
+
+    
+    <h2>Justify content</h2>
+    <div style="display: flex; 
+                justify-content: space-around;" 
+        class="color-container">
+        <div class="color-item" style="text-align: center;">
+            <div>
+                <i class="fa-solid fa-graduation-cap fa-3x"></i>
+            </div>
+            <div>
+                015
+            </div>
+            <div>
+                Programas con acreditación alta calidad
+
+            </div>
+        </div>
+        <div class="color-item" style="text-align: center;">
+            <div>
+                <i class="fa-solid fa-graduation-cap fa-3x"></i>
+            </div>
+            <div>
+                015
+            </div>
+            <div>
+                Programas con acreditación alta calidad
+
+            </div>
+        </div>
+        <div class="color-item" style="text-align: center;">
+            <div>
+                <i class="fa-solid fa-graduation-cap fa-3x"></i>
+            </div>
+            <div>
+                015
+            </div>
+            <div>
+                Programas con acreditación alta calidad
+
+            </div>
+        </div>
+        <div class="color-item" style="text-align: center;">
+            <div>
+                <i class="fa-solid fa-graduation-cap fa-3x"></i>
+            </div>
+            <div>
+                015
+            </div>
+            <div>
+                Programas con acreditación alta calidad
+
+            </div>
+        </div><div class="color-item" style="text-align: center;">
+            <div>
+                <i class="fa-solid fa-graduation-cap fa-3x"></i>
+            </div>
+            <div>
+                015
+            </div>
+            <div>
+                Programas con acreditación alta calidad
+
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div style="display: flex; justify-content: space-evenly;" class="color-container">
+        <div class="color-item">Item 1</div>
+        <div class="color-item">Item 2</div>
+        <div class="color-item">Item 3</div>
+    </div>
+
+    <h2>Align items</h2>
+    <div style="height: 100px; align-items: center; display: flex; justify-content: space-around;" class="color-container">
+        <div class="color-item">Item 1</div>
+        <div class="color-item">Item 2</div>
+        <div class="color-item">Item 3</div>
+    </div>
+    <br>
+    <div style="height: 100px; align-items: stretch; display: flex; justify-content: space-evenly;" class="color-container">
+        <div class="color-item">Item 1</div>
+        <div class="color-item">Item 2</div>
+        <div class="color-item">Item 3</div>
+    </div>
+
+    <style>
+        .nav{
+            display: flex;
+            justify-content: flex-end;
+            flex-flow: row wrap;
+            background: deepskyblue;
+            margin: 0;
+        }
+        .nav-item{
+            text-align: center; 
+            padding: 10px;
+            border-top: 1px solid rgba(255, 255, 255,0.3); 
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+        }
+        .nav-item:hover{
+            background: #1565C0;
+        }
+        
+    </style>
+    <div class="nav"> 
+        <div class="nav-item">Estudiante</div>
+        <div class="nav-item">Docentes</div>
+        <div class="nav-item">Funcionarios</div>
+        <div class="nav-item">Aspirantes</div>
+    </div>
+
+
+    <h1>
+        Properties for the Children
+    </h1>
+    <hr>
+
+    <style>
+        .container01{
+            display: flex;
+            gap:10px;
+        }
+        .item-flex-col1{
+            flex-grow: 1;
+        }
+        .item-flex-col3{
+            flex-grow: 3;
+        }
+    </style>
+
+    <h2>Flex-grow</h2>
+    <div class="container01 color-container">
+        <div class="item-flex-col1 color-item">Aside</div>
+        <div class="item-flex-col3 color-item-orange">Content</div>
+    </div>
+    <br>
+
+    <style>
+        .item-flex-grow-1{
+            width: 30px;
+            flex-grow: 1;
+            background-color: coral;
+        }
+        .item-flex-grow-2{
+            flex-grow: 2;
+        }
+        .item-flex-grow-3{
+            flex-grow: 3;
+        }
+    </style>
+    <div style="display: flex;" class="color-container">
+        <div class="item-flex-grow-1">1</div>
+        <div class="item-flex-grow-2">2</div>
+        <div class="item-flex-grow-3">3</div>
+    </div>
+
+    <br>
+    <div style="height: 200px;" class="container01 color-container">
+        <div style=" width: 50%" class="color-item">
+            Imagen principal
+        </div>
+        <div style=" width: 50%; display: flex; flex-direction: column;" >
+            <div style="height: 50%;" class="color-item-orange">1</div>
+            <div style="height: 50%;" class="color-item">2</div>
+        </div>
+    </div>
+
+    <br><br><br><br>
+
+
+
+</body>
+</html>
