@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        .color-container-01{
+            background-color: rgb(28, 138, 52);
+            padding: 10px;
+        }
+        .color-item-01{
+            background-color: rgb(202, 235, 56);
+            margin-top: 5px;
+        }
+        .color-item-02{
+            background-color: rgb(136, 142, 236);
+            margin-top: 5px;
+        }
+        .color-item-03{
+            background-color: rgb(204, 51, 158);
+            margin-top: 5px;
+        }
+    </style>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+</head>
+<body>
+    <h1>Display: flex | flex-wrap</h1>
+    <style>
+        .flex01{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .item01{
+            margin: 5px;
+            width: 150px;
+        }
+    </style>
+    <div class="flex01 color-container-01">
+        <div class="color-item-01 item01">1323232323_____</div>
+        <div class="color-item-01 item01">2</div>
+        <div class="color-item-01 item01">3</div>
+        <div class="color-item-01 item01">5</div>
+        <div class="color-item-01 item01">6</div>
+        <div class="color-item-01 item01">7</div>
+        <div class="color-item-01 item01">8</div>
+    </div>
+    
+    
+    <h1>justify-content</h1>
+    <style>
+        .flex02{
+            display: flex;
+            justify-content: space-around;
+            height: 150px;
+            align-items: flex-end;
+        }
+        .item02{
+            margin: 5px;
+            width: 150px;
+        }
+    </style>
+    <div class="flex02 color-container-01">
+        <div class="color-item-01 item01">Inicio</div>
+        <div class="color-item-01 item01">Admisiones</div>
+        <div class="color-item-01 item01">Internacionalización</div>
+        <div class="color-item-01 item01">Investigación</div>
+    </div>
+
+
+    <div style="display: flex; padding-left: 50px;padding-right: 50px;">
+        <div><img src="../images/unicordoba_logo.png" alt=""></div>
+        <div style="display: flex; 
+                    gap: 10px;
+                    align-items: center; 
+                    justify-content: right; 
+                    width: 100%;">
+            <div>INSTITUCIONAL</div>
+            <div>ACADEMIA</div>
+            <div>INVESTIGACIÓN</div>
+            <div>EXTENSIÓN</div>
+            <div>ADMISIONES</div>
+            <div>INTERNACIONALIZACIÓN</div>
+            <div><i class="fa-solid fa-magnifying-glass" style="color: rgb(192, 30, 170);"></i></div>
+        </div>
+    </div>
+
+    <!-- <iframe src="calendario-privados.pdf"></iframe> -->
+
+    <div style="display: flex; gap: 5px; " class="color-container-01">
+        <div style="width: 50%;display: flex; flex-direction: column; gap: 20px;" class="color-item-01">
+            <div class="color-item-02" style="height: 300px;">1</div>
+            <div class="color-item-03" style="height: 203px;">2</div>
+        </div>
+        <div style="width: 50%;" class="color-item-01">3</div>
+    </div>
+
+
+    <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br>
+
+</body>
+</html>
