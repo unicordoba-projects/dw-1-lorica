@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <body>
+    <div class="flex">
+        <div class="w-56 bg-blue-500 hidden sm:block h-14">Logo</div>
+        <div class="bg-blue-200 flex-1 p-2">
+            <i class='bg-indigo-500 text-white text-3xl p-1 rounded-md bx bx-menu'></i>
+        </div>
+    </div>
+    <div class="flex">
+        <div class="w-56 bg-blue-400 hidden sm:block h-screen p-3">
+            <div class="border-b-2  bg-blue-800 text-white text-center flex items-center p-1">
+                <i class='text-white text-xl p-1 rounded-md bx bx-file'></i> 
+                <span>Documentos</span>
+            </div>
+        </div>
+        <div class="bg-gray-500 flex-1 p-2">
+            <div class="bg-white rounded p-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-lg font-semibold mb-2" for="nombres">Nombres</label>
+                        <input class="w-full border-1 border-blue-400 bg-blue-100 rounded type="text" name="nombres" id="nombres">
+                    </div>
+                    <div>
+                        <label class="block text-lg font-semibold mb-2" for="nombres">Apellidos</label>
+                        <input class="w-full border-1 border-blue-400 bg-blue-100 rounded type="text" name="nombres" id="nombres">
+                    </div>
+                    <div>
+                        <label class="block text-lg font-semibold mb-2" for="nombres">Dirección</label>
+                        <input class="w-full border-1 border-blue-400 bg-blue-100 rounded type="text" name="nombres" id="nombres">
+                    </div>
+                    <div>
+                        <label class="block text-lg font-semibold mb-2" for="nombres">Email</label>
+                        <input class="w-full border-1 border-blue-400 bg-blue-100 rounded type="text" name="nombres" id="nombres">
+                    </div>
+                    <div>
+                        <button class="bg-blue-800 text-white p-2 rounded-md">Enviar Datos</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="bg-indigo-200 text-2xl text-center">Hola Mundo!</div> -->
+    <!-- <h1 class="text-3xl font-bold underline">
+      Hello world!
+    </h1> -->
+  </body>
+</html>
