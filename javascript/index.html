@@ -1,0 +1,101 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script>
+        let nombres = []
+    </script>
+</head>
+<body>
+    <input type="text" name="" id="txtNombre">    
+    <button id="btnAgregar" type="button">Agregar</button>
+    <button id="btnListado" type="button">Listado</button>
+
+    <div id="mainContent"></div>
+</body>
+
+<script>
+    document.getElementById('btnAgregar').addEventListener('click', function() {
+      nombres.push(document.getElementById('txtNombre').value)
+    });
+    document.getElementById('btnListado').addEventListener('click', async function() {
+        const response = await fetch("http://127.0.0.1:3000/javascript/listado.html");
+
+        const html = await response.text();
+        document.getElementById('mainContent').innerHTML = html; // Insertar el HTML en el div
+
+
+       /*
+        fetch('http://127.0.0.1:3000/javascript/listado.html')
+            // .then(response => response.json()) 
+            .then(response => {                
+                return response.text(); // Obtener el HTML como texto
+              })
+              .then(html => {
+                document.getElementById('mainContent').innerHTML = html; // Insertar el HTML en el div
+              })
+            .catch(error => {
+                console.error('Error en la solicitud:', error);
+            });
+            */
+    });
+    </script>
+
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script>
+        let nombres = []; // Array en el archivo principal
+    </script>
+</head>
+<body>
+    <input type="text" id="txtNombre">    
+    <button id="btnAgregar" type="button">Agregar</button>
+    <button id="btnListado" type="button">Listado</button>
+    <div id="mainContent"></div>
+
+    <script>
+        // Agregar nombres al array
+        document.getElementById('btnAgregar').addEventListener('click', function() {
+            nombres.push(document.getElementById('txtNombre').value);
+        });
+
+        // Cargar tabla desde archivo externo y mostrar datos
+        document.getElementById('btnListado').addEventListener('click', async function() {
+            try {
+                // 1. Cargar el HTML de la tabla
+                const response = await fetch("http://127.0.0.1:3000/javascript/listado.html");
+                if (!response.ok) throw new Error("Error al cargar la tabla");
+                const html = await response.text();
+                
+                // 2. Insertar el HTML en el contenedor
+                document.getElementById('mainContent').innerHTML = html;
+
+                // 3. Generar filas de la tabla con los nombres
+                // const tabla = document.querySelector('#mainContent table');
+                const tabla = document.getElementById('tablaNombres');
+                nombres.forEach((nombre, index) => {
+                    const fila = document.createElement('tr');
+                    fila.innerHTML = `
+                        <td>${index + 1}</td>
+                        <td>${nombre}</td>
+                    `;
+                    tabla.appendChild(fila);
+                });
+
+            } catch (error) {
+                console.error("Error:", error);
+                document.getElementById('mainContent').innerHTML = "No se pudo cargar el listado";
+            }
+        });
+    </script>
+</body>
+</html>
